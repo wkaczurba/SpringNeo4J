@@ -3,9 +3,14 @@ package ord;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-import org.springframework.data.neo4j.annotation.GraphId;
-import org.springframework.data.neo4j.annotation.NodeEntity;
-import org.springframework.data.neo4j.annotation.RelatedTo;
+//import org.springframework.data.neo4j.annotation.GraphId;
+//import org.springframework.data.neo4j.annotation.NodeEntity;
+//import org.springframework.data.neo4j.annotation.RelatedTo; (NOW: Relationship)
+
+import org.neo4j.ogm.annotation.GraphId;
+import org.neo4j.ogm.annotation.NodeEntity;
+import org.neo4j.ogm.annotation.Relationship;
+
 
 @NodeEntity
 public class Order {
@@ -15,7 +20,7 @@ public class Order {
 	private String customer;
 	private String type;
 	
-	@RelatedTo(type="HAS_ITEMS")
+	@Relationship(type="HAS_ITEMS")
 	private Set<Item> items = new LinkedHashSet<>();
 	
 	// constructor to help tests.

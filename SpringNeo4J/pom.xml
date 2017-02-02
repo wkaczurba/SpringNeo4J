@@ -26,17 +26,20 @@
     <dependency>
     	<groupId>org.springframework</groupId>
     	<artifactId>spring-test</artifactId>
-    	<version>4.0.6.RELEASE</version>
+<!--   	<version>4.0.6.RELEASE</version> -->
+    	<version>4.3.6.RELEASE</version>
     </dependency>
     <dependency>
     	<groupId>org.springframework</groupId>
     	<artifactId>spring-context</artifactId>
-    	<version>4.0.6.RELEASE</version>
+<!--   	<version>4.0.6.RELEASE</version> -->
+    	<version>4.3.6.RELEASE</version>
     </dependency>
     <dependency>
     	<groupId>org.springframework.data</groupId>
     	<artifactId>spring-data-neo4j</artifactId>
-    	<version>3.1.2.RELEASE</version>
+<!--    <version>3.1.2.RELEASE</version> -->
+    	<version>4.2.0.RELEASE</version>
     </dependency>
     <dependency>
     	<groupId>javax.validation</groupId>
@@ -48,5 +51,34 @@
     	<artifactId>slf4j-simple</artifactId>
     	<version>1.7.22</version>
     </dependency>
+	<dependency>
+	    <groupId>org.neo4j</groupId>
+	    <artifactId>neo4j-ogm-http-driver</artifactId>
+        <version>2.1.1</version>
+	    <scope>runtime</scope>
+	</dependency>
+	<dependency>
+	    <groupId>org.neo4j</groupId>
+	    <artifactId>neo4j-ogm-embedded-driver</artifactId>
+        <version>2.1.1</version>
+	    <scope>runtime</scope>	    
+	</dependency>
+	<dependency>
+	    <groupId>org.neo4j</groupId>
+	    <artifactId>neo4j-ogm-bolt-driver</artifactId>
+        <version>2.1.1</version>
+	    <scope>runtime</scope>
+	</dependency>
+	<dependency>
+		<groupId>org.neo4j</groupId>
+		<artifactId>neo4j-ogm-core</artifactId>
+        <version>2.1.1</version>		 
+	</dependency>
+	<!--  Database itself - needed if embedded database is used.-->
+	<dependency>
+		<groupId>org.neo4j</groupId>
+		<artifactId>neo4j</artifactId>
+		<version>3.1.1</version>
+	</dependency>
   </dependencies>
 </project>

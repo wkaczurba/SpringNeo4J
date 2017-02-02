@@ -19,7 +19,7 @@ import ord.Order;
 import ord.db.OrderRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.neo4j.conversion.Result;
+//import org.springframework.data.neo4j.conversion.Result;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestExecutionListeners;
 
@@ -53,7 +53,7 @@ public class Neo4jTest {
 		ordersFound = orderRepo.findByCustomer("John Welsh");
 		Assert.assertEquals(1, ordersFound.size());
 		
-		ordersFound = orderRepo.findByCustomerLike("John.*");
+		ordersFound = orderRepo.findByCustomerLike("John*");
 		Assert.assertEquals(1, ordersFound.size());
 		
 		ordersFound = orderRepo.findByCustomerAndType("John Welsh", "WEB");

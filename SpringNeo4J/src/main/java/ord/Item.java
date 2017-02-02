@@ -1,7 +1,10 @@
 package ord;
 
-import org.springframework.data.neo4j.annotation.GraphId;
-import org.springframework.data.neo4j.annotation.NodeEntity;
+//import org.springframework.data.neo4j.annotation.GraphId;
+//import org.springframework.data.neo4j.annotation.NodeEntity;
+
+import org.neo4j.ogm.annotation.GraphId;
+import org.neo4j.ogm.annotation.NodeEntity;
 
 @NodeEntity
 public class Item {

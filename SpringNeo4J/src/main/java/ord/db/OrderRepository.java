@@ -3,6 +3,7 @@ package ord.db;
 import java.util.List;
 
 import org.springframework.data.neo4j.repository.GraphRepository;
+import org.springframework.transaction.annotation.Transactional;
 
 import ord.Order;
 
