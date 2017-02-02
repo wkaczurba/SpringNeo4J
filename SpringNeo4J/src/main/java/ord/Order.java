@@ -17,6 +17,18 @@ public class Order {
 	
 	@RelatedTo(type="HAS_ITEMS")
 	private Set<Item> items = new LinkedHashSet<>();
+	
+	// constructor to help tests.
+	public Order() {
+	}
+	
+	public Order(String customer, String type, Item... items) {
+		this.customer = customer;
+		this.type = type;
+		for (Item item : items) {
+			this.items.add(item);
+		}
+	}
 
 	// getters + setters below
 	

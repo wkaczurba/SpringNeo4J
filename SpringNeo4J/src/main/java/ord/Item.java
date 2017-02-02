@@ -14,7 +14,17 @@ public class Item {
 	private double price;
 	private int quantity;
 	
+	// Constructor to help tests:
+	public Item() { }
+	public Item(Order order, String product, double price, int quantity) {
+		this.order = order;
+		this.product = product;
+		this.price = price;
+		this.quantity = quantity;
+	}
+	
 	// Getters + Setters:
+	
 	
 	public Order getOrder() {
 		return order;
